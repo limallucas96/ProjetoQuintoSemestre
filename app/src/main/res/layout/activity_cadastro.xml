@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.lucas.piquinto.CadastroActivity">
+
+    <EditText
+        android:id="@+id/editNome_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="49dp"
+        android:ems="10"
+        android:hint="Nome"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/editSobrenome_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/editNome_id"
+        android:layout_below="@+id/editNome_id"
+        android:layout_marginTop="25dp"
+        android:ems="10"
+        android:hint="Sobrenome"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/editIdade_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/editSobrenome_id"
+        android:layout_below="@+id/editSobrenome_id"
+        android:layout_marginTop="25dp"
+        android:ems="10"
+        android:hint="Idade"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/editUsuario_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editIdade_id"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="26dp"
+        android:ems="10"
+        android:hint="Nome de usuário"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/editSenha_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/editUsuario_id"
+        android:layout_below="@+id/editUsuario_id"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="Senha"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/btnCadastrar_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editSenha_id"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="38dp"
+        android:text="Cadastrar"
+        android:onClick="onReg"/>
+</RelativeLayout>

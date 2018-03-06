@@ -16,9 +16,9 @@
             android:id="@+id/btnLogar_id"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
             android:layout_below="@+id/editSenha_id"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="84dp"
+            android:layout_marginTop="44dp"
             android:text="Logar" />
 
         <EditText
@@ -50,6 +50,16 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="44dp"
             app:srcCompat="@drawable/hotelicon" />
+
+        <TextView
+            android:id="@+id/viewCadastro_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnLogar_id"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="47dp"
+            android:text="Clique aqui para se cadastrar"
+            android:onClick="openCadastroActivity"/>
 
     </RelativeLayout>
 </LinearLayout>
