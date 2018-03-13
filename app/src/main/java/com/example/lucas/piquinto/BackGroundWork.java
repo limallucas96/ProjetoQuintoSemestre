@@ -2,7 +2,9 @@ package com.example.lucas.piquinto;
 
 import android.app.AlertDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.os.AsyncTask;
+import android.widget.Toast;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -24,12 +26,13 @@ public class BackGroundWork extends AsyncTask<String, Void, String> {
 
     private Context contex;
     private AlertDialog alertDialog;
+    private boolean loginStatus = false;
 
     private final String DATA_TYPE = "UTF-8";
     private final String DATA_TYPE2 = "iso-8859-1";
 
     BackGroundWork(Context context) {
-        this.contex = context;
+        this.contex = context.getApplicationContext();
 
     }
 
@@ -39,7 +42,7 @@ public class BackGroundWork extends AsyncTask<String, Void, String> {
         String type = params[0]; //pega valores passados no metodo onLogin da classe mainActivity
         String user_name = params[1];
         String password = params[2];
-        String login_url = "http://192.168.0.2/login.php";
+        String login_url = "http://192.168.11.1/quickroomservice/login.php";
         String register_url = "http://192.168.0.2/register.php";
 
         if (type.equals("login")) {
@@ -52,8 +55,8 @@ public class BackGroundWork extends AsyncTask<String, Void, String> {
 
                 OutputStream outputStream = connection.getOutputStream();
                 BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(outputStream, DATA_TYPE));
-                String post_data = URLEncoder.encode("user_name", DATA_TYPE) + "=" + URLEncoder.encode(user_name, DATA_TYPE) + "&" +
-                        URLEncoder.encode("password", DATA_TYPE) + "=" + URLEncoder.encode(password, DATA_TYPE);
+                String post_data = URLEncoder.encode("login", DATA_TYPE) + "=" + URLEncoder.encode(user_name, DATA_TYPE) + "&" +
+                        URLEncoder.encode("senha", DATA_TYPE) + "=" + URLEncoder.encode(password, DATA_TYPE);
 
                 writer.write(post_data);
                 writer.flush();
@@ -72,6 +75,7 @@ public class BackGroundWork extends AsyncTask<String, Void, String> {
 
                 connection.disconnect();
 
+                loginStatus = true;
                 return result;
 
             } catch (MalformedURLException e) {
@@ -134,8 +138,15 @@ public class BackGroundWork extends AsyncTask<String, Void, String> {
 
     @Override
     protected void onPostExecute(String result) {
-        alertDialog.setMessage(result);
-        alertDialog.show();
+        Toast toast = Toast.makeText(contex.getApplicationContext(), result, Toast.LENGTH_LONG);
+        toast.show();
+
+        if(loginStatus){
+            Intent intent = new Intent(contex.getApplicationContext(), RecepcaoActivity.class).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            contex.startActivity(intent);
+            loginStatus = false;
+        }
+
     }
 
     @Override
