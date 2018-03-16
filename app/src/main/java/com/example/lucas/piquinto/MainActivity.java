@@ -29,9 +29,6 @@ public class MainActivity extends AppCompatActivity {
                 onLogin(view);
             }
         });
-
-
-
     }
 
     public void onLogin(View view){
