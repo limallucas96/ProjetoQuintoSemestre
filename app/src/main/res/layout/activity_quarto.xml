@@ -4,9 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.example.lucas.piquinto.Activity.RecepcaoActivity">
-
+    tools:context="com.example.lucas.piquinto.Activity.QuartoActivity">
 
     <include
         android:id="@+id/recepcao_toolbar"
@@ -28,6 +26,5 @@
         android:layout_height="wrap_content">
 
     </android.support.v4.view.ViewPager>
-
 
 </RelativeLayout>

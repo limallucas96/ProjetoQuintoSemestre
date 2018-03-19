@@ -1,4 +1,4 @@
-package com.example.lucas.piquinto;
+package com.example.lucas.piquinto.Activity;
 
 
 
@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+
+import com.example.lucas.piquinto.R;
 
 public class MainActivity extends AppCompatActivity {
 

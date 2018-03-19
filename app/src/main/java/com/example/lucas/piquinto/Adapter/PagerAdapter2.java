@@ -4,9 +4,9 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
-import com.example.lucas.piquinto.Fragment.Tab1;
-import com.example.lucas.piquinto.Fragment.Tab2;
-import com.example.lucas.piquinto.Fragment.Tab3;
+import com.example.lucas.piquinto.Fragment.AbrirCheckinFragment;
+import com.example.lucas.piquinto.Fragment.FecharCheckinFragment;
+import com.example.lucas.piquinto.Fragment.BuscarCheckinFragment;
 
 /**
  * Created by Lucas on 14/03/2018.
@@ -26,14 +26,14 @@ public class PagerAdapter2 extends FragmentStatePagerAdapter{
        switch (position){
 
            case 0:
-               Tab1 tab1 = new Tab1();
-               return tab1;
+               FecharCheckinFragment fecharCheckinFragment = new FecharCheckinFragment();
+               return fecharCheckinFragment;
            case 1:
-               Tab2 tab2 = new Tab2();
-               return tab2;
+               AbrirCheckinFragment abrirCheckinFragment = new AbrirCheckinFragment();
+               return abrirCheckinFragment;
            case 2:
-               Tab3 tab3 = new Tab3();
-               return tab3;
+               BuscarCheckinFragment buscarCheckinFragment = new BuscarCheckinFragment();
+               return buscarCheckinFragment;
            default:
                return null;
 

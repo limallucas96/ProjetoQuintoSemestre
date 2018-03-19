@@ -1,4 +1,4 @@
-package com.example.lucas.piquinto;
+package com.example.lucas.piquinto.Activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -6,7 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import java.nio.file.Files;
+import com.example.lucas.piquinto.R;
 
 public class CadastroActivity extends AppCompatActivity {
 

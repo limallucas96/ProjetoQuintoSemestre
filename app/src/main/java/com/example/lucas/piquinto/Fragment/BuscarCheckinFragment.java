@@ -18,7 +18,7 @@ import com.example.lucas.piquinto.R;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Tab3 extends Fragment {
+public class BuscarCheckinFragment extends Fragment {
 
 
     private OnFragmentInteractionListener mListener;
@@ -28,7 +28,7 @@ public class Tab3 extends Fragment {
     private RadioButton btnLivre, btnTodos, btnOcupados;
     private ArrayAdapter<String> adapter;
 
-    public Tab3() {
+    public BuscarCheckinFragment() {
         // Required empty public constructor
     }
 

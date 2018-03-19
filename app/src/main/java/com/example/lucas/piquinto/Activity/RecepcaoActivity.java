@@ -1,26 +1,26 @@
-package com.example.lucas.piquinto;
+package com.example.lucas.piquinto.Activity;
 
 import android.net.Uri;
 import android.os.StrictMode;
 
 import android.support.design.widget.TabLayout;
-import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.widget.ArrayAdapter;
 
 
 import com.example.lucas.piquinto.Adapter.PagerAdapter2;
-import com.example.lucas.piquinto.Fragment.Tab1;
-import com.example.lucas.piquinto.Fragment.Tab2;
-import com.example.lucas.piquinto.Fragment.Tab3;
+import com.example.lucas.piquinto.Fragment.FecharCheckinFragment;
+import com.example.lucas.piquinto.Fragment.AbrirCheckinFragment;
+import com.example.lucas.piquinto.Fragment.BuscarCheckinFragment;
+import com.example.lucas.piquinto.R;
+
 import java.io.InputStream;
 
 
-public class RecepcaoActivity extends AppCompatActivity implements Tab1.OnFragmentInteractionListener, Tab2.OnFragmentInteractionListener, Tab3.OnFragmentInteractionListener{
+public class RecepcaoActivity extends AppCompatActivity implements FecharCheckinFragment.OnFragmentInteractionListener, AbrirCheckinFragment.OnFragmentInteractionListener, BuscarCheckinFragment.OnFragmentInteractionListener{
 
     private final String url_login = "http://192.168.11.1/quickroomservice/login.php";
 

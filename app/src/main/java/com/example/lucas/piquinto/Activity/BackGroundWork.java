@@ -1,4 +1,4 @@
-package com.example.lucas.piquinto;
+package com.example.lucas.piquinto.Activity;
 
 import android.app.AlertDialog;
 import android.content.Context;
