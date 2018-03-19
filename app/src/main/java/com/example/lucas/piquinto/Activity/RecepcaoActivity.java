@@ -8,8 +8,10 @@ import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ArrayAdapter;
+
 
 import com.example.lucas.piquinto.Adapter.PagerAdapter2;
 import com.example.lucas.piquinto.Fragment.Tab1;
@@ -25,11 +27,19 @@ public class RecepcaoActivity extends AppCompatActivity implements Tab1.OnFragme
     private ArrayAdapter<String> adapter;
     private InputStream inputStream = null;
 
+    private Toolbar toolbar;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recepcao);
+
+
+        //Componentes da tela
+        toolbar = findViewById(R.id.recepcao_toolbar);
+        toolbar.setTitle("Recepção");
+        setSupportActionBar(toolbar);
 
         StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder().detectNetwork().build());
 
