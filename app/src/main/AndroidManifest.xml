@@ -21,7 +21,8 @@
         </activity>
         <activity android:name=".Activity.CadastroActivity" />
         <activity android:name=".Activity.RecepcaoActivity" />
-        <activity android:name=".Activity.QuartoActivity"></activity>
+        <activity android:name=".Activity.QuartoActivity" />
+        <activity android:name=".Activity.ServicoActivity"></activity>
     </application>
 
 </manifest>

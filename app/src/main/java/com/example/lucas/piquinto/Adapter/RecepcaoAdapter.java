@@ -12,11 +12,11 @@ import com.example.lucas.piquinto.Fragment.BuscarCheckinFragment;
  * Created by Lucas on 14/03/2018.
  */
 
-public class PagerAdapter2 extends FragmentStatePagerAdapter{
+public class RecepcaoAdapter extends FragmentStatePagerAdapter{
 
     private  int numberOfTabs;
 
-    public PagerAdapter2(FragmentManager fm, int numberOfTabs){
+    public RecepcaoAdapter(FragmentManager fm, int numberOfTabs){
         super(fm);
         this.numberOfTabs = numberOfTabs;
     }
