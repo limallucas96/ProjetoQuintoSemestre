@@ -1,5 +1,9 @@
 package com.example.lucas.piquinto.Controller;
 
+import android.util.Log;
+
+import com.example.lucas.piquinto.Model.Quarto;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -12,6 +16,7 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.ArrayList;
 
 /**
  * Created by Lucas on 20/03/2018.
@@ -26,8 +31,10 @@ public class QueryController {
        this.url_login = url;
    }
 
-    public String getData(String value) {
+    public String[] getData(String value) {
         try {
+
+            ArrayList<String> queryResult;
 
             URL url = new URL(url_login);
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
@@ -50,18 +57,25 @@ public class QueryController {
             inputStream.close();
             String result = sb.toString();
 
-            //PARSING JSON DATA
-
             JSONArray jsonArray = new JSONArray(result);
             JSONObject jsonObject = null;
 
-            String data[] = new String[jsonArray.length()];
 
-            for (int i = 0; i < data.length; i++) {
+            for (int i = 0; i < jsonArray.length(); i++) {
                 jsonObject = jsonArray.getJSONObject(i);
+
             }
 
-            return jsonObject.getString(value).toString();
+            String data[] = new String[jsonArray.length()];
+
+            for(int i = 0 ; i < data.length ; i++){
+
+                jsonObject = jsonArray.getJSONObject(i);
+                data[i] = jsonObject.getString(value);
+                Log.e("TESTE2", data[i]);
+            }
+
+            return data;
 
         } catch (MalformedURLException e) {
             e.printStackTrace();
