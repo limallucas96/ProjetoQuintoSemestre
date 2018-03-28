@@ -1,18 +1,16 @@
 package com.example.lucas.piquinto.Fragment;
 
-import android.content.Context;
+
+
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.ContextMenu;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Adapter;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.RadioButton;
@@ -52,9 +50,11 @@ public class BuscarCheckinFragment extends Fragment {
     @Override
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
         super.onCreateContextMenu(menu, v, menuInfo);
-        menu.setHeaderTitle("Opções de quarto");
+
+        menu.setHeaderTitle("Opções do quarto");
         menu.add("Informações");
         menu.add("Fazer Check-out");
+
     }
 
     @Override
