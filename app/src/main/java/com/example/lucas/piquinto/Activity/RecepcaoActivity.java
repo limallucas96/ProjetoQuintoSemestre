@@ -8,7 +8,11 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.Toast;
 
 
 import com.example.lucas.piquinto.Adapter.RecepcaoAdapter;
@@ -29,12 +33,10 @@ public class RecepcaoActivity extends AppCompatActivity implements FecharCheckin
 
     private Toolbar toolbar;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recepcao);
-
 
         //Componentes da tela
         toolbar = findViewById(R.id.recepcao_toolbar);
@@ -71,10 +73,7 @@ public class RecepcaoActivity extends AppCompatActivity implements FecharCheckin
             }
         });
 
-
-
     }
-
 
 
     @Override

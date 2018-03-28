@@ -69,10 +69,8 @@ public class QueryController {
             String data[] = new String[jsonArray.length()];
 
             for(int i = 0 ; i < data.length ; i++){
-
                 jsonObject = jsonArray.getJSONObject(i);
                 data[i] = jsonObject.getString(value);
-                Log.e("TESTE2", data[i]);
             }
 
             return data;

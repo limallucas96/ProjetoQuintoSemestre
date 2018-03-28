@@ -35,7 +35,8 @@
                 android:layout_alignTop="@+id/radioGroup"
                 android:layout_marginTop="1dp"
                 android:layout_weight="1"
-                android:text="Todos" />
+                android:text="Todos"
+                />
 
             <RadioButton
                 android:id="@+id/radioLivres_id"
@@ -46,7 +47,8 @@
                 android:layout_marginStart="1dp"
                 android:layout_toEndOf="@+id/Livre"
                 android:layout_weight="1"
-                android:text="Livres" />
+                android:text="Livres"
+                />
 
             <RadioButton
                 android:id="@+id/radioOcupados_id"
@@ -57,7 +59,8 @@
                 android:layout_alignEnd="@+id/lvLista_id"
                 android:layout_marginEnd="1dp"
                 android:layout_weight="1"
-                android:text="Ocupados" />
+                android:text="Ocupados"
+                />
         </RadioGroup>
 
 </RelativeLayout>

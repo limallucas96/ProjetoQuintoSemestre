@@ -45,10 +45,24 @@ public class CustomAdapter extends ArrayAdapter<String> {
 
         tvQuarto.setText(tvQuarto.getText()+numeroQuarto);
         tvHospede.setText(tvHospede.getText()+hospede[position]);
-        tvSituacao.setText(tvSituacao.getText()+situacao[position]);
+        tvSituacao.setText(tvSituacao.getText()+getSituacao(Integer.parseInt(situacao[position])));
+
 
         imageQuarto.setImageResource(R.drawable.hotelicon);
 
         return view;
+    }
+
+    public String getSituacao(int situacao){
+        if(situacao == 1)
+            return "Todos";
+        else
+            if (situacao == 2)
+                return "Ocupado";
+            else
+                if (situacao == 3)
+                    return "Livre";
+        else
+            return null;
     }
 }
